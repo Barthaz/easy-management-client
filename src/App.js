@@ -7,9 +7,10 @@ import { Navbar, Footer, Sidebar, ThemeSettings } from './components';
 import { Analytics, Calendar, Home, Kanban, Logs, Team, Login, Register }  from './pages';
 import './App.css';
 
-const App = () => {
+import { useStateContext } from './contexts/ContextProvider';
 
-    const activeMenu = true;
+const App = () => {
+    const { activeMenu } = useStateContext();
 
     return (
         <div>
