@@ -2,9 +2,53 @@ import React from 'react';
 import { Link, NavLink} from 'react-router-dom';
 import { SiShopware } from 'react-icons/si';
 import { MdOutlineCancel } from 'react-icons/md';
+import { FiShoppingBag } from 'react-icons/fi';
+import { IoMdContacts } from 'react-icons/io';
+import { AiOutlineCalendar, AiOutlineStock } from 'react-icons/ai';
+import { BsKanban, BsBarChart } from 'react-icons/bs';
 import { TooltipComponent } from '@syncfusion/ej2-react-popups';
 
-import { links } from '../data/dummy';
+const links = [
+  {
+    title: 'Pages',
+    links: [
+      {
+        name: 'home',
+        icon: <FiShoppingBag />,
+      },
+    ],
+  },
+  {
+    title: 'Workflow',
+    links: [
+      {
+        name: 'team',
+        icon: <IoMdContacts />,
+      },
+      {
+        name: 'calendar',
+        icon: <AiOutlineCalendar />,
+      },
+      {
+        name: 'kanban',
+        icon: <BsKanban />,
+      }
+    ],
+  },
+  {
+    title: 'Data',
+    links: [
+      {
+        name: 'analytics',
+        icon: <AiOutlineStock />,
+      },
+      {
+        name: 'logs',
+        icon: <BsBarChart />,
+      }
+    ],
+  },
+];
 
 const Sidebar = () => {
   const activeMenu = true;
