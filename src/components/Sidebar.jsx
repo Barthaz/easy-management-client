@@ -5,11 +5,54 @@ import { IoMdContacts } from 'react-icons/io';
 import { AiOutlineCalendar, AiOutlineStock, AiOutlineHome, AiOutlineContainer } from 'react-icons/ai';
 import { BsKanban, BsBarChart } from 'react-icons/bs';
 import { TooltipComponent } from '@syncfusion/ej2-react-popups';
-
 import { useStateContext } from '../contexts/ContextProvider';
-import { links } from '../data/data'; 
-
 import logo from '../data/EMLogo-small.png';
+
+const links = [
+  {
+    title: 'Pages',
+    links: [
+      {
+        name: 'home',
+        icon: <AiOutlineHome />,
+      },
+    ],
+  },
+  {
+    title: 'Workflow',
+    links: [
+      {
+        name: 'projects',
+        icon: <AiOutlineContainer />,
+      },
+      {
+        name: 'team',
+        icon: <IoMdContacts />,
+      },
+      {
+        name: 'calendar',
+        icon: <AiOutlineCalendar />,
+      },
+      {
+        name: 'kanban',
+        icon: <BsKanban />,
+      }
+    ],
+  },
+  {
+    title: 'Data',
+    links: [
+      {
+        name: 'analytics',
+        icon: <AiOutlineStock />,
+      },
+      {
+        name: 'logs',
+        icon: <BsBarChart />,
+      }
+    ],
+  },
+];
 
 const Sidebar = () => {
   const { activeMenu, setActiveMenu, screenSize } = useStateContext();
